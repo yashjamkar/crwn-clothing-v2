@@ -9,7 +9,7 @@ import {
 
 import "./sign-up-form.styles.scss";
 
-import Button from "../button/button.component";
+import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 
 const defaultFormFields = {
   displayName: "",
@@ -58,49 +58,49 @@ const SignUpForm = () => {
   };
 
   return (
-    <div className="sign-up-container">
+    <div className='sign-up-container'>
       <h2>Dont have an account?</h2>
       <h1>Sign up with your email and password</h1>
       <form onSubmit={handleSubmit}>
         <FormInput
-          label="Display Name"
-          type="text"
+          label='Display Name'
+          type='text'
           required
           onChange={handleChange}
-          name="displayName"
+          name='displayName'
           value={displayName}
         />
 
         <FormInput
-          label="Email"
-          type="text"
+          label='Email'
+          type='text'
           required
           onChange={handleChange}
-          name="email"
+          name='email'
           value={email}
         />
 
         <FormInput
-          label="Password"
-          type="password"
+          label='Password'
+          type='password'
           required
           onChange={handleChange}
-          name="password"
+          name='password'
           value={password}
         />
 
         <FormInput
-          label="Confirm Password"
-          type="password"
+          label='Confirm Password'
+          type='password'
           required
           onChange={handleChange}
-          name="confirmPassword"
+          name='confirmPassword'
           value={confirmPassword}
         />
 
         <Button
-          buttonType="inverted"
-          type="submit"
+          buttonType={BUTTON_TYPE_CLASSES.inverted}
+          type='submit'
         >
           Sign Up
         </Button>
